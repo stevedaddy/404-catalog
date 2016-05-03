@@ -1,0 +1,31 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>404 Catalog</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/main.css">-->
+    <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
+</head>
+<body ng-app="catalogApp">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<h1>404 Catalog</h1>
+<div ui-view></div>
+<a ui-sref="catalog">catalog</a>
+<a ui-sref="detail">detail</a>
+<script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="src/app.js"></script>
+<script src="src/routes.js"></script>
+
+</body>
+</html>
