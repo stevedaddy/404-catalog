@@ -1,3 +1,5 @@
 (function(){
-    var catalogApp = angular.module('catalogApp', ['ui.router']);
+    var catalogApp = angular.module('catalogApp', ["ui.router", "angular.filter"])
+
+
 }())
