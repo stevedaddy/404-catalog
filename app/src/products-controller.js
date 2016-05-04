@@ -5,34 +5,45 @@
         //$scope.goToDetail = function(cCode) {
         //    $state.go('country', {country: cCode.countryCode});
         //};
-        console.log($scope.$state = $state.current.url);
+       // console.log($scope.$state = $state.current.url);
 
 
         function chopUrl(fullUrl){
             return   fullUrl = fullUrl.replace(/https?:\/\/[^\/]+/i, ""); // Remove domain from beginning of URL
             //return fullUrl.replace(/\/$/, ''); // Remove forward slash / at the end of the URL ($)
         }
+        function splitUrl(partUrl){
+            var s = partUrl.replace(/\/$/, '');
+            var s = s.replace(/\/*/, '');
+            var s =  s.replace(/\//g, '-');
+            return s;
+        }
         function urlArray(urls){
             $scope.validUrls = new Array();
             $scope.validUrls.push(urls);
-            console.log($scope.validUrls.toString());
+           // console.log($scope.validUrls.toString());
         }
         angular.forEach($scope.importproducts.Categories, function(value, key){
+            var urlPartSave = chopUrl(value.CategoryUrl);
             var urlPart = chopUrl(value.CategoryUrl);
+            var urlPart =  splitUrl(urlPart);
             urlArray(urlPart);
-         //   console.log($scope.validUrls.toString());
+            console.log(urlPart.toString());
+            console.log(urlPartSave.toString());
         });
         angular.forEach($scope.importproducts.Products, function(value, key){
+            var urlPartSave = chopUrl(value.ProductUrl);
             var urlPart = chopUrl(value.ProductUrl);
+            splitUrl(urlPart);
             urlArray(urlPart);
-         //   console.log($scope.validUrls.toString());
+           console.log(urlPart.toString());
+            console.log(urlPartSave.toString());
         });
-
 
         // Function to check if a page on nume is returning a 200
         $scope.getData = function(){
-            $http.get('http://localhost:8080/proxy/numeproducts.com/hair-styling/hot-tools/curling-wand/octowand-curling-iron-set/')
-           // $http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
+           // $http.get('http://localhost:8080/proxy/numeproducts.com/hair-styling/hot-tools/curling-wand/octowand-curling-iron-set/')
+            $http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
 
             .success(function(data, status, headers, config) {
                     console.log('The product they are viewing is live again, send user message with redirect warning');
