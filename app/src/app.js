@@ -1,4 +1,5 @@
-(function (){
 
-	angular.module('catalogApp', ['ui-route']);
+(function(){
+    var catalogApp = angular.module('catalogApp', ["ui.router", "angular.filter"])
+
 }())
