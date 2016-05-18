@@ -1,0 +1,14 @@
+{
+  "name": "404-catalog",
+  "description": "404 catalog",
+  "main": "index.js",
+  "authors": [
+    "Steve Tchorzewski"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/stevedaddy/404-catalog",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18"
+  }
+}
