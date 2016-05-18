@@ -1,18 +1,11 @@
 
-var gulp = require('gulp'),
-    connect = require('gulp-connect'),
-    Proxy = require('gulp-connect-proxy');
+var gulp = require('gulp');
+var connect = require('gulp-connect');
 
-gulp.task('connect', function () {
+gulp.task('connect', function() {
     connect.server({
-        root: 'app/',
-        middleware: function (connect, opt) {
-            opt.route = '/proxy';
-            var proxy = new Proxy(opt);
-            return [proxy];
-        }
+        root: 'app/'
     });
 });
-
 gulp.task('default', ['connect']);
 
