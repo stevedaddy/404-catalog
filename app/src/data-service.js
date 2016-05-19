@@ -18,8 +18,8 @@
                         catalogO = [];
                         productsO = productsO.concat(response.data.Products);
                         catalogO = catalogO.concat(response.data.Categories);
-                        console.log(catalogO);
-                        console.log(productsO);
+                       // console.log(catalogO);
+                        //console.log(productsO);
                     });
             }
 

@@ -12,7 +12,7 @@
         $stateProvider
             .state('catalog', {
                 url: "/catalog",
-                //controller: 'productsCtrl',
+                controller: 'productsCtrl',
                 templateUrl: "./partials/catalog.html",
                 resolve: {
                     importproducts: function (dataservice) {
