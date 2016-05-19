@@ -2,22 +2,24 @@
     angular.module('catalogApp')
         .factory('dataservice', function($http, $q, lodash){
 
-            var products = [],
-                catalog = [];
+            var productsO = [],
+                catalogO = [];
 
             return {
                 importProducts: importProducts,
-                getPoducts: getPoducts,
+                getProducts: getProducts,
                 getCatalog: getCatalog
             };
 
             function importProducts() {
                 return $http.get('./resources/catalog.json', {cache: true})
                     .then(function(response){
-                        products = [];
-                        catalog = [];
-                        products = products.concat(response.data.Products);
-                        products = products.concat(response.data.Catagories);
+                        productsO = [];
+                        catalogO = [];
+                        productsO = productsO.concat(response.data.Products);
+                        catalogO = catalogO.concat(response.data.Categories);
+                        console.log(catalogO);
+                        console.log(productsO);
                     });
             }
 
@@ -25,12 +27,14 @@
                 return lodash.find(products, {CategoryUniqueId: categoryUniqueId});
             }
 
-            function getPoducts(){
-                return products;
+            function getProducts(){
+                return productsO;
             }
 
             function getCatalog(){
-                return catalog;
+              //  console.log(catalog);
+                return catalogO;
+
             }
 
         });

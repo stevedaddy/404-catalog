@@ -1,7 +1,7 @@
 <div class="bestsellers">
 
     <ul class="products-grid" id="products-grid-table">
-        <li ng-repeat="result in importproducts.Categories">
+        <li ng-repeat="result in dataservice.getProducts">
             <!-- add each cats CategoryUniqueID to a var called cat  -->
             <div class="bestsellers-title-block" ng-init="cat = result.CategoryUniqueID">
                 <h3 class="bestsellers-title">{{ result.Name || 'No Data' }}</h3>

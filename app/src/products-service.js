@@ -47,7 +47,7 @@
                 howlong = waitTime;
                 checkSite(howlong);
 
-                // ALL THIS SHIT CAN BE HANDLED BY THE ROUTES I BELIEVE
+                // ALL THIS CAN BE HANDLED BY THE ROUTES I BELIEVE
                 // KEEPING IT AROUND FOR A LITTLE WHILE, UNTIL I FIGURE OUT HOW I'LL CHECK
                 // IF THE URL REQUESTED IS REPRESENTED IN THE PRODUCTS JSON
                 //function chopUrl(fullUrl){

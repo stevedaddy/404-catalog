@@ -1,19 +1,18 @@
 (function(){
-
    // var catalogApp = angular.module('catalogApp', ['ui.router']);
     angular.module('catalogApp')
     .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-            $httpProvider.defaults.useXDomain = true;
-            delete $httpProvider.defaults.headers.common['X-Requested-With'];
-        //
+        //$httpProvider.defaults.useXDomain = true;
+        //delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
         // For any unmatched url, redirect to /404
-        $urlRouterProvider.otherwise("/404");
-        //
+       // $urlRouterProvider.otherwise("/404");
+
         // Now set up the states
         $stateProvider
             .state('catalog', {
                 url: "/catalog",
-                controller: 'productsCtrl',
+                //controller: 'productsCtrl',
                 templateUrl: "./partials/catalog.html",
                 resolve: {
                     importproducts: function (dataservice) {
@@ -49,6 +48,4 @@
             //})
 
     })
-
-
 }())
