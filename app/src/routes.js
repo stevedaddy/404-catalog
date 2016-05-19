@@ -16,36 +16,37 @@
                 controller: 'productsCtrl',
                 templateUrl: "./partials/catalog.html",
                 resolve: {
-                    importproducts: function (api) {
+                    importproducts: function (dataservice) {
                         //if there's a cached version saved in api2 don't load a new one when the state is loaded
-                        if(!api.cache){
-                            api.cache = api.importProducts()
-                        }
-                        return api.cache
+                        //if(!api.cache){
+                        //    api.cache = api.importProducts()
+                        //}
+                        //return api.cache
+                        return dataservice.importProducts();
                     }
                 }
             })
 
-            .state('product', {
-                url: "/catalog/:product/:more",
-
-                templateUrl: "./partials/detail.html",
-
-                resolve: {
-                    thisproduct :  function(api, $stateParams) {
-                      //  $stateParams.thisproduct = api.searchThisProductInfo($stateParams.product);
-                        console.log($stateParams.product + '/' + $stateParams.more);
-                      //  console.log($stateParams.more);
-                        return $stateParams.thisproduct;
-                    }
-                }
-
-            })
-            .state('404', {
-                url: "/404",
-                templateUrl: "./partials/404.html"
-
-            })
+            //.state('product', {
+            //    url: "/catalog/:product",
+            //
+            //    templateUrl: "./partials/detail.html",
+            //
+            //    resolve: {
+            //        thisproduct :  function(api, $stateParams) {
+            //          //  $stateParams.thisproduct = api.searchThisProductInfo($stateParams.product);
+            //            console.log($stateParams.product + '/' + $stateParams.more);
+            //          //  console.log($stateParams.more);
+            //            return $stateParams.thisproduct;
+            //        }
+            //    }
+            //
+            //})
+            //.state('404', {
+            //    url: "/404",
+            //    templateUrl: "./partials/404.html"
+            //
+            //})
 
     })
 
