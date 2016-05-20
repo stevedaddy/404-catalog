@@ -1,10 +1,9 @@
 (function(){
     angular.module('catalogApp')
-    .controller('productsCtrl', function($scope, $state, products, importproducts, dataservice){
-        $scope.importproducts = importproducts;
-        $scope.getcatalog = dataservice.getCatalog();
+    .controller('productsCtrl', function($scope, $state, dataservice){
+        //$scope.importproducts = importproducts;
         $scope.getproducts = dataservice.getProducts();
-
+        $scope.getcatalog = dataservice.getCatalog();
             //dataservice.importProducts() = $scope.importProducts;
 
             console.log($scope.getcatalog);
