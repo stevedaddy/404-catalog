@@ -1,13 +1,13 @@
 (function(){
     angular.module('catalogApp')
-        .factory('products', function($http, $timeout){
+        .factory('pollForRequestedPage', function($http, $timeout){
             return {
                 checkSite : checkSite,
                 startPolling : startPolling
             };
 
             function checkSite(howlong){
-               //  $http.get('http://localhost:8080/proxy/numeproducts.com/hair-styling/hot-tools/curling-wand/octowand-curling-iron-set/')
+                //  $http.get('http://localhost:8080/proxy/numeproducts.com/hair-styling/hot-tools/curling-wand/octowand-curling-iron-set/')
                 $http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
                     .success(function(data, status, headers, config) {
                         console.log('The product they are viewing is live again, send user message with redirect warning');
@@ -55,5 +55,3 @@
 
 
 }())
-
-

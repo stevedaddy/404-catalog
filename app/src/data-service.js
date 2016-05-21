@@ -1,6 +1,6 @@
 (function(){
     angular.module('catalogApp')
-        .factory('dataservice', function($http, $q, lodash){
+        .factory('dataService', function($http, $q, lodash){
 
             var productsO = [],
                 catalogO = [];
