@@ -1,56 +1,19 @@
 (function(){
-   // var catalogApp = angular.module('catalogApp', ['ui.router']);
     angular.module('catalogApp')
     .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-        //$httpProvider.defaults.useXDomain = true;
-        //delete $httpProvider.defaults.headers.common['X-Requested-With'];
-
-        // For any unmatched url, redirect to /404
-       // $urlRouterProvider.otherwise("/404");
-
-        // Now set up the states
         $stateProvider
             .state('catalog', {
                 url: "/",
                 controller: 'catalogCtrl',
-                templateUrl: "./partials/catalog.html",
-                resolve: {
-                    importproducts: function (dataservice) {
-                        //if there's a cached version saved in api2 don't load a new one when the state is loaded
-                        //if(!api.cache){
-                        //    api.cache = api.importProducts()
-                        //}
-                        //return api.cache
-                        return dataservice.importProducts();
-                    }
-                }
+                templateUrl: "./partials/catalog.html"
             })
             .state('product-details', {
-                url: 'catalog/:productId',
-                controller: 'productCtrl',
+                url: '/catalog/:productId',
+                controller: 'ProductCtrl',
                 templateUrl: './partials/product-details.html'
             });
-
-            //.state('product', {
-            //    url: "/catalog/:product",
-            //
-            //    templateUrl: "./partials/detail.html",
-            //
-            //    resolve: {
-            //        thisproduct :  function(api, $stateParams) {
-            //          //  $stateParams.thisproduct = api.searchThisProductInfo($stateParams.product);
-            //            console.log($stateParams.product + '/' + $stateParams.more);
-            //          //  console.log($stateParams.more);
-            //            return $stateParams.thisproduct;
-            //        }
-            //    }
-            //
-            //})
-            //.state('404', {
-            //    url: "/404",
-            //    templateUrl: "./partials/404.html"
-            //
-            //})
-
+            $urlRouterProvider.when('', '/');
+            //// For any unmatched url, redirect to /404
+            $urlRouterProvider.otherwise("/404");
     })
 }())

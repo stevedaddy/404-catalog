@@ -1,6 +1,11 @@
 (function(){
     angular.module('catalogApp')
-        .controller('productCtrl', function($scope, $stateParams, dataService){
-            $scope.product = dataservice.productByProductId($stateParams.productId);
+        .controller('ProductCtrl', function($scope, $state, $stateParams, dataservice){
+            if(dataservice.productByProductId($stateParams.productId)){
+                $scope.product = dataservice.productByProductId($stateParams.productId);
+            }
+            else {
+
+            }
         });
 }());

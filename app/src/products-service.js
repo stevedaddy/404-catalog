@@ -46,41 +46,6 @@
                 }
                 howlong = waitTime;
                 checkSite(howlong);
-
-                // ALL THIS CAN BE HANDLED BY THE ROUTES I BELIEVE
-                // KEEPING IT AROUND FOR A LITTLE WHILE, UNTIL I FIGURE OUT HOW I'LL CHECK
-                // IF THE URL REQUESTED IS REPRESENTED IN THE PRODUCTS JSON
-                //function chopUrl(fullUrl){
-                //    return   fullUrl = fullUrl.replace(/https?:\/\/[^\/]+/i, ""); // Remove domain from beginning of URL
-                //    //return fullUrl.replace(/\/$/, ''); // Remove forward slash / at the end of the URL ($)
-                //}
-                //function splitUrl(partUrl){
-                //    var s = partUrl.replace(/\/$/, '');
-                //    var s = s.replace(/\/*/, '');
-                //    var s =  s.replace(/\//g, '-');
-                //    return s;
-                //}
-                //function urlArray(urls){
-                //    validUrls = new Array();
-                //    validUrls.push(urls);
-                //    // console.log(validUrls.toString());
-                //}
-                //angular.forEach(importproducts.Categories, function(value, key){
-                //    var urlPartSave = chopUrl(value.CategoryUrl);
-                //    var urlPart = chopUrl(value.CategoryUrl);
-                //    var urlPart =  splitUrl(urlPart);
-                //    urlArray(urlPart);
-                //    console.log(urlPart.toString());
-                //    console.log(urlPartSave.toString());
-                //});
-                //angular.forEach(importproducts.Products, function(value, key){
-                //    var urlPartSave = chopUrl(value.ProductUrl);
-                //    var urlPart = chopUrl(value.ProductUrl);
-                //    splitUrl(urlPart);
-                //    urlArray(urlPart);
-                //    console.log(urlPart.toString());
-                //    console.log(urlPartSave.toString());
-                //});
             }
         });
 

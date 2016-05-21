@@ -8,7 +8,6 @@
             return {
                 importProducts: importProducts,
                 getProducts: getProducts,
-                getProducts: getProducts,
                 getCatalog: getCatalog,
                 productByProductId: productByProductId
             };
