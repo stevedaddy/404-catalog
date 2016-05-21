@@ -13,10 +13,10 @@
                 <!-- if  CategoriesID array has this cat in it -->
                 <li ng-repeat="result in getproducts" ng-if="result.CategoriesID | contains: cat">
                     <span class="pro-img">
-                    <a href=" {{ result.ProductUrl }}" title="{{ result.Name || 'No Data' }}"
-                       class="product-image"><img
-                            ng-src="{{ result.ImageUrl || 'No Data' }}"
-                            alt="{{ result.Name || 'No Data' }}"></a>
+                    <a ui-sref="product-details({ productId: result.ProductUniqueID })">
+                        <img ng-src="{{ result.ImageUrl || 'No Data' }}"
+                             alt="{{ result.Name || 'No Data' }}">
+                    </a>
                     </span>
 
                     <p><a href="{{ result.ProductUrl || '#' }}"

@@ -11,8 +11,8 @@
         // Now set up the states
         $stateProvider
             .state('catalog', {
-                url: "/catalog",
-                controller: 'productsCtrl',
+                url: "/",
+                controller: 'catalogCtrl',
                 templateUrl: "./partials/catalog.html",
                 resolve: {
                     importproducts: function (dataservice) {
@@ -25,6 +25,11 @@
                     }
                 }
             })
+            .state('product-details', {
+                url: 'catalog/:productId',
+                controller: 'productCtrl',
+                templateUrl: './partials/product-details.html'
+            });
 
             //.state('product', {
             //    url: "/catalog/:product",

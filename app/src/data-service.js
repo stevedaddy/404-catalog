@@ -8,7 +8,9 @@
             return {
                 importProducts: importProducts,
                 getProducts: getProducts,
-                getCatalog: getCatalog
+                getProducts: getProducts,
+                getCatalog: getCatalog,
+                productByProductId: productByProductId
             };
 
             function importProducts() {
@@ -24,7 +26,11 @@
             }
 
             function find(categoryUniqueId){
-                return lodash.find(products, {CategoryUniqueId: categoryUniqueId});
+                return lodash.find(productsO, {CategoryUniqueId: categoryUniqueId});
+            }
+
+            function productByProductId(productId) {
+                return lodash.find(productsO, {ProductUniqueID: productId});
             }
 
             function getProducts(){

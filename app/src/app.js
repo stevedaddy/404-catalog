@@ -13,4 +13,4 @@
             //console.log(dataservice.getCatalog);
             products.startPolling();
         });
-}())
+}());

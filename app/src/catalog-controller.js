@@ -1,13 +1,13 @@
 (function(){
     angular.module('catalogApp')
-    .controller('productsCtrl', function($scope, $state, dataservice){
+    .controller('catalogCtrl', function($scope, $state, dataservice){
         //$scope.importproducts = importproducts;
         $scope.getproducts = dataservice.getProducts();
         $scope.getcatalog = dataservice.getCatalog();
             //dataservice.importProducts() = $scope.importProducts;
 
-            console.log($scope.getcatalog);
-            console.log($scope.getproducts);
+            //console.log($scope.getcatalog);
+            //console.log($scope.getproducts);
            //console.log(productsO);
         //$scope.goToDetail = function(cCode) {
         //    $state.go('country', {country: cCode.countryCode});
