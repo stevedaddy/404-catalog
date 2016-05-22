@@ -1,48 +1,32 @@
 (function(){
     angular.module('catalogApp')
         .factory('dataService', function($http, $q, lodash){
-
-            var productsO = [],
-                catalogO = [];
-
+            var products = [],
+                catalog = [];
             return {
                 importProducts: importProducts,
                 getProducts: getProducts,
                 getCatalog: getCatalog,
                 productByProductId: productByProductId
             };
-
             function importProducts() {
                 return $http.get('./resources/catalog.json', {cache: true})
                     .then(function(response){
-                        productsO = [];
-                        catalogO = [];
-                        productsO = productsO.concat(response.data.Products);
-                        catalogO = catalogO.concat(response.data.Categories);
-                       // console.log(catalogO);
-                        //console.log(productsO);
+                        products = products.concat(response.data.Products);
+                        catalog = catalog.concat(response.data.Categories);
                     });
             }
-
             function find(categoryUniqueId){
-                return lodash.find(productsO, {CategoryUniqueId: categoryUniqueId});
+                return lodash.find(products, {CategoryUniqueId: categoryUniqueId});
             }
-
             function productByProductId(productId) {
-                return lodash.find(productsO, {ProductUniqueID: productId});
+                return lodash.find(products, {ProductUniqueID: productId});
             }
-
             function getProducts(){
-                return productsO;
+                return products;
             }
-
             function getCatalog(){
-              //  console.log(catalog);
-                return catalogO;
-
+                return catalog;
             }
-
         });
-
-
 }())

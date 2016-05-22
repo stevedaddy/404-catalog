@@ -1,57 +1,83 @@
 (function(){
+
     angular.module('catalogApp')
-        .factory('pollForRequestedPage', function($http, $timeout){
+        .factory('pollRequestedPage', function($http, $timeout, $q){
+
+
+            var leastWaitTime = 5000;
+            var mostWaitTime = 30000;
+
+
             return {
                 checkSite : checkSite,
                 startPolling : startPolling
             };
 
             function checkSite(howlong){
-                //  $http.get('http://localhost:8080/proxy/numeproducts.com/hair-styling/hot-tools/curling-wand/octowand-curling-iron-set/')
-                $http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
-                    .success(function(data, status, headers, config) {
-                        console.log('The product they are viewing is live again, send user message with redirect warning');
-                        window.alert('the page you are looking for on nume is back, redirect countdown in modal');
-                        // don't run the intervalFunction again since we know the site is back
-                    })
-                    .error(function(data, status, headers, config){
-                        console.log('The product they are viewing is still not returning a 400, do nothing');
-                        console.log('Wait to check again: ' + howlong);
-                        intervalFunction(howlong);
-                    })
+                return $q(function(resolve, reject, notify) {
+                    var request = new XMLHttpRequest();
+                    var url = 'http://localhost:8080/proxy/numeproducts.com/ssss';
+                    request.open("GET", url, true);
+                    request.onload = onload;
+                    request.onerror = onerror;
+                    request.onprogress = onprogress;
+                    request.send();
+
+                    function onload() {
+                        if (request.status === 200) {
+                            console.log('The page onload!' + request);
+                            resolve(request.responseText);
+                        } else {
+                            intervalFunction(howlong);
+                            console.log('Waited ' + howlong + ' before last request. ' + request.status);
+                           // reject(new Error("Status code was " + request.status));
+                        }
+                    }
+
+                    function onerror() {
+                       // reject(new Error("Can't XHR " + JSON.stringify(url)));
+                        console.log("Can't XHR " + JSON.stringify(url));
+                    }
+
+                    function onprogress(event) {
+                        //notify(event.loaded / event.total);
+                        console.log('The page onprogress! ' + event);
+                    }
+                });
+
+                //THIS WAY SEEMS WAY SIMPLER
+                //$http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
+                //    .then(function(data) {
+                //        console.log('The product they are viewing is live again, send user message with redirect warning');
+                //        window.alert('the page you are looking for on nume is back, redirect countdown in modal');
+                //        // don't run the intervalFunction again since we know the site is back
+                //    }, function(data){
+                //        console.log('The product they are viewing is still not returning a 400, do nothing');
+                //        console.log('Wait to check again: ' + howlong);
+                //        intervalFunction(howlong);
+                //    });
+
             }
 
+
             function intervalFunction (howlong){
+
+
                 $timeout(function() {
-                    // DON'T NEED TO DO ANYTHING HERE??
-                    // PROBABLY WILL NEED TO CHECK HERE TOO ONCE THIS IS WORKING FOR REAL
                 }, howlong).then(function() {
-                    // You know the timeout is done here
-                    if (howlong < 160000){
-                        howlong = howlong + howlong;
+                    if (howlong < 600000){
+                        howlong = howlong * 2;
                     }
                     checkSite(howlong);
                 });
             }
 
             function startPolling(waitTime){
-                // interval logic
-                //start with waiting as long as the app requests for first check
-                // to see if nume page is available and double the amount of time
-                // to wait to check again each time it checks
-                // up to 16 seconds, then it just checks every 16 seconds
-                defaultFirstCheckTime = 2500;
-                if (waitTime == undefined){
-                    var waitTime = defaultFirstCheckTime;
-                }
-                howlong = waitTime;
-                checkSite(howlong);
+                //devide by two for the first time these are submitted to interval function, which doubles all values
+                leastWaitTime = leastWaitTime / 2;
+                waitTimeThis = waitTime / 2;
+                thisWaitTime = waitTimeThis || leastWaitTime;
+                intervalFunction(thisWaitTime);
             }
         });
-
-
-
-
-
-
 }())
