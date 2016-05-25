@@ -1,5 +1,5 @@
 (function(){
-    var catalogApp = angular.module('catalogApp', ["ui.router", "angular.filter"])
+    var catalogApp = angular.module('catalogApp', ['ngAnimate', "ui.router", "angular.filter", 'anim-in-out'])
         .value('lodash', _)
         .run(function(dataService, pollRequestedPage){
             dataService.importProducts();

@@ -41,11 +41,7 @@
             }
 
             function startPolling(waitTime){
-                //devide by two for the first time these are submitted to interval function, which doubles all values
-                leastWaitTime = leastWaitTime / 2;
-                waitTimeThis = waitTime / 2;
-                thisWaitTime = waitTimeThis || leastWaitTime;
-                intervalFunction(thisWaitTime);
+                intervalFunction(waitTime);
             }
         });
 }())
