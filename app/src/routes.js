@@ -4,7 +4,7 @@
         $stateProvider
             .state('catalog', {
                 url: "/",
-                controller: 'catalogCtrl',
+                controller: 'CatalogCtrl',
                 templateUrl: "./partials/catalog.html"
             })
             .state('product-details', {

@@ -1,7 +1,7 @@
 (function(){
     angular.module('catalogApp')
-    .controller('catalogCtrl', function($scope, $state, dataService){
-        $scope.getproducts = dataService.getProducts();
-        $scope.getcatalog = dataService.getCatalog();
+    .controller('CatalogCtrl', function($scope, $state, dataService){
+        $scope.getProducts = dataService.getProducts();
+        $scope.getCatalog = dataService.getCatalog();
     });
 }());

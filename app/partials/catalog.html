@@ -1,6 +1,6 @@
 <div class="bestsellers">
     <ul class="products-grid" id="products-grid-table">
-        <li ng-repeat="result in getcatalog">
+        <li ng-repeat="result in getCatalog">
             <!-- add each cats CategoryUniqueID to a var called cat  -->
             <div class="bestsellers-title-block" ng-init="cat = result.CategoryUniqueID">
                 <h3 class="bestsellers-title">{{ result.Name || 'No Data' }}</h3>
@@ -8,7 +8,7 @@
 
             <ul class="products-grid" id="products-grid-table">
                 <!-- if  CategoriesID array has this cat in it -->
-                <li ng-repeat="result in getproducts" ng-if="result.CategoriesID | contains: cat">
+                <li ng-repeat="result in getProducts" ng-if="result.CategoriesID | contains: cat">
                     <span class="pro-img">
                         <a ui-sref="product-details({ productId: result.ProductUniqueID })">
                             <img ng-src="{{ result.ImageUrl || 'No Data' }}"
