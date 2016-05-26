@@ -1,6 +1,5 @@
-<div class="bestsellers" class="my-component anim-slide-left">
-    <ul class="products-grid" id="products-grid-table">
-        <li ng-repeat="result in getCatalog">
+<div class="bestsellers" class="my-component anim-slide-left" ng-repeat="result in getCatalog">
+    <section clss="products-grid" id="products-grid-table">
             <!-- add each cats CategoryUniqueID to a var called cat  -->
             <div class="bestsellers-title-block" ng-init="cat = result.CategoryUniqueID">
                 <h3 class="bestsellers-title">{{ result.Name || 'No Data' }}</h3>
@@ -25,7 +24,8 @@
                     </span>
                 </li>
             </ul>
-
-        </li>
-    </ul>
+    </section>
 </div>
+
+
+
