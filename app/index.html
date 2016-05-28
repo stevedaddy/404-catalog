@@ -9,8 +9,12 @@
     <link rel="stylesheet" type="text/css" href="./styles/app.css" media="all"/>
     <!--<link rel="stylesheet" type="text/css" href="http://numeproducts.com/media/css/u.9681955089e1fd1f6c573a057c5f5f22.1464050780.css" media="all"/>-->
     <link rel="stylesheet" type="text/css" href="./bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css" media="all"/>
+    <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
     <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+    </style>
     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">
     /c/Users/Stevie/Desktop/angular-class/404-catalog
     -->
@@ -19,25 +23,36 @@
     <!--<link rel="stylesheet" href="css/main.css">-->
     <!--<script src="js/vendor/modernizr-2.8.3.min.js"></script>-->
 </head>
-<body ng-app="catalogApp" class="cms-home">
-    <div class="maincontent">
+<body class="cms-home">
+
+    <div class="maincontent" ng-app="catalogApp">
+
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h1 id="all">NuMe Error Page Catalog</h1>
+        <header id="all">
+            <div class="container"><a href="/" class="nume-logo"><img src="http://numeproducts.com/skin/frontend/atypical/default/images/assets/nume-logo-2015.png" alt="NuMe"></a>
+                <h2>Oops! This Page was not found for some reason... re-checking in</h2></div>
+        </header>
+
         <div ui-view class="catalog anim-in-out" data-anim-speed="1000"></div>
     </div>
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script data-require="ui-bootstrap@1.1.1" data-semver="1.1.1" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-1.1.1.js"></script>
+    <script data-require="ui-bootstrap-tpls@1.1.1" data-semver="1.1.1" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-1.1.1.js"></script>
     <script src="./bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
     <script src="./bower_components/angular-filter/dist/angular-filter.js"></script>
     <script src="./bower_components/lodash/dist/lodash.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/carousel.js"></script>
     <script src="src/catalog-controller.js"></script>
     <script src="src/product-controller.js"></script>
     <script src="src/data-service.js"></script>
     <script src="src/poll-requested-page-service.js"></script>
     <script src="src/routes.js"></script>
+
 </body>
 </html>

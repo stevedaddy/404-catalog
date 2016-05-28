@@ -38,14 +38,14 @@ gulp.task('copy-html-files', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('./styles/*.scss')
+    return gulp.src('./app/styles/*.scss')
         .pipe(sass())
         .pipe(postcss([require('autoprefixer')]))
         .pipe(gulp.dest('./css'));
 });
 
 gulp.task('templates', function() {
-    return gulp.src('./example/*.html')
+    return gulp.src('./app/*.html')
         .pipe(templateCache('templates.js', {
             root: 'app/',
             module: 'catalogApp'

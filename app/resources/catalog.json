@@ -83,6 +83,32 @@
         },
         {
 
+            "Name": "Test1",
+
+            "ProductUniqueID": "11288",
+
+            "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/titan-3-curling-iron-set/",
+
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-t3-blu_10.jpg",
+
+            "CategoriesID": [
+
+                "15",
+
+                "20"
+
+            ],
+
+            "Description": "The strong, 100% titanium barrel found in the Titan 3 is the top choice and most widely used\n                styling tool of celebrity stylists and hair professionals world-wide. The pure titanium-infused barrels\n                in 19mm, 25mm, and 32mm, are built for hair that has difficulty holding a curl, imparting the\n                longest-lasting hold possible. For tight curls and waves, a beachy-texture or the perfect bounce – Titan\n                3 is your premiere choice. Heat-resistant glove included.",
+
+            "Price": "199.00",
+
+            "Availability": "true"
+
+        },
+        {
+
             "Name": "Curl Jam",
 
             "ProductUniqueID": "754",
