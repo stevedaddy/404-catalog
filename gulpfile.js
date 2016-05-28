@@ -38,7 +38,7 @@ gulp.task('copy-html-files', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('./scss/*.scss')
+    return gulp.src('./styles/*.scss')
         .pipe(sass())
         .pipe(postcss([require('autoprefixer')]))
         .pipe(gulp.dest('./css'));

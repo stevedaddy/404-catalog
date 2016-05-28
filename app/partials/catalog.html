@@ -1,4 +1,4 @@
-<div class="bestsellers" class="my-component anim-slide-left" ng-repeat="result in getCatalog">
+<div class="bestsellers anim-slide-below-fade" data-anim-sync="true" ng-repeat="result in getCatalog">
     <section clss="products-grid" id="products-grid-table">
             <!-- add each cats CategoryUniqueID to a var called cat  -->
             <div class="bestsellers-title-block" ng-init="cat = result.CategoryUniqueID">
@@ -10,12 +10,11 @@
                 <li ng-repeat="result in getProducts" ng-if="result.CategoriesID | contains: cat">
                     <span class="pro-img">
                         <a ui-sref="product-details({ productId: result.ProductUniqueID })">
-                            <img ng-src="{{ result.ImageUrl || 'No Data' }}"
+                            <img ng-src="{{ result.ImageUrlThumb || 'No Data' }}"
                                  alt="{{ result.Name || 'No Data' }}">
                         </a>
                     </span>
-                    <p><a href="{{ result.ProductUrl || '#' }}"
-                          title="{{ result.Name || 'No Data' }}">{{ result.Name || 'No Data' }}</a>
+                    <p> <a ui-sref="product-details({ productId: result.ProductUniqueID })">{{ result.Name || 'No Data' }}</a>
                     </p>
                     <span class="price">
                         <div class="price-box">

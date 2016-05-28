@@ -1,2 +1,21 @@
-{{product}}
-<a ui-sref="catalog">catalog</a>
+<div class="content anim-slide-below-fade"  data-anim-sync="true">
+    <div class="product-col-left">
+        <div class="pr-image-block">
+            <div class="clearfix" id="content">
+                <div class="product-image">
+                    <img src="{{product.ImageUrlFull}}" alt="{{product.Name}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pr-data-block">
+        <h1>{{product.Name}}</h1>
+        <p class="product-description">{{product.Description}}</p>
+        <div class="price-box">
+            <span class="price">${{product.Price}}</span>
+            </span>
+        </div>
+        <a ui-sref="catalog">Back to Catalog</a>
+    </div>
+
+</div>

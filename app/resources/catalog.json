@@ -22,78 +22,6 @@
             "CategoryUniqueID": "25",
             "CategoryUrl": "http://numeproducts.com/styling-tools/hair-dryers",
             "CategoryParentID": "22"
-        },
-        {
-            "Name": "Hair Care &amp; Accessores",
-            "CategoryUniqueID": "96",
-            "CategoryUrl": "http://numeproducts.com/hair-care-accessories",
-            "CategoryParentID": "2"
-        },
-        {
-            "Name": "Accessories",
-            "CategoryUniqueID": "43",
-            "CategoryUrl": "http://numeproducts.com/hair-care-accessories/accessories",
-            "CategoryParentID": "96"
-        },
-        {
-            "Name": "Nails",
-            "CategoryUniqueID": "405",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors",
-            "CategoryParentID": "2"
-        },
-        {
-            "Name": "Neon",
-            "CategoryUniqueID": "406",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/neon",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "Red",
-            "CategoryUniqueID": "407",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/red",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "Pink",
-            "CategoryUniqueID": "408",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/pink",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "Metal",
-            "CategoryUniqueID": "409",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/metal",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "White",
-            "CategoryUniqueID": "410",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/white",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "Nudes",
-            "CategoryUniqueID": "411",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/nude",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "Blacks",
-            "CategoryUniqueID": "412",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/black",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "Pastel",
-            "CategoryUniqueID": "413",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/pastel",
-            "CategoryParentID": "405"
-        },
-        {
-            "Name": "Decor",
-            "CategoryUniqueID": "414",
-            "CategoryUrl": "http://numeproducts.com/nail-polish/nail-colors/decor",
-            "CategoryParentID": "405"
         }
     ],
     "Products": [
@@ -101,7 +29,8 @@
             "Name": "Octowand",
             "ProductUniqueID": "546",
             "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/octowand-curling-iron-set/",
-            "ImageUrl": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/o/c/octowand_2_1.jpg",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/o/c/octowand_2_1.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/7/2/727a3099_web_new.jpg",
             "CategoriesID": [
                 "2",
                 "15"
@@ -114,7 +43,9 @@
             "Name": "Lustrum",
             "ProductUniqueID": "1138",
             "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/lustrum-curling-iron-set/",
-            "ImageUrl": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/u/eu-lust-blk_3_new.jpg",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/e/u/eu-lust-blk_3_new.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/e/u/eu-lust-blk_4_new.jpg",
+
             "CategoriesID": [
                 "2",
                 "15",
@@ -132,7 +63,8 @@
 
             "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/titan-3-curling-iron-set/",
 
-            "ImageUrl": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/t/i/titan3_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-t3-blu_10.jpg",
 
             "CategoriesID": [
 
@@ -157,7 +89,8 @@
 
             "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/curl-jam-curling-iron-set/",
 
-            "ImageUrl": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/u/curljam_1.jpg",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/u/curljam_1.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-cjam-blk_1_2.jpg",
 
             "CategoriesID": [
 
@@ -186,7 +119,8 @@
 
             "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/curling-wand/classic-curling-wand-32mm/",
 
-            "ImageUrl": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/c/l/classic_32mm_2.jpg",
 
             "CategoriesID": [
 
@@ -215,7 +149,8 @@
 
             "ProductUrl": "http://numeproducts.com/hair-styling/hot-tools/hair-straightener/megastar-flat-iron/",
 
-            "ImageUrl": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/m/e/megastar_1_4.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/p/-/p-mega-fuc_7.jpg",
 
             "CategoriesID": [
 
@@ -242,7 +177,8 @@
 
             "ProductUrl": "http://numeproducts.com/signature-ionic-dryer-all/",
 
-            "ImageUrl": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlThumb": "http://numeproducts.com/media/catalog/product/cache/1/thumbnail/200x/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
+            "ImageUrlFull": "http://numeproducts.com/media/catalog/product/cache/1/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/i/signature_dryerrr.jpg",
 
             "CategoriesID": [
 
