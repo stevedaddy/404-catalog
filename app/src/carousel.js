@@ -3,12 +3,14 @@
         .controller('CarouselController', function($scope) {
             $scope.active = 0;
 
+
+
             // chunked arrays -> http://stackoverflow.com/a/21653981/65681
             function chunk(arr, size) {
                 var newArr = [];
-
+                $scope.arr = arr || [];
                 // console.log($scope.arr);
-                var arrayLength = arr.length;
+                var arrayLength = $scope.arr.length;
                 for (var i = 0; i < arrayLength; i += size) {
                     newArr.push(arr.slice(i, i + size));
                 }

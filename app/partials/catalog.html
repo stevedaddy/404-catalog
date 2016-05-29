@@ -24,37 +24,42 @@
             </ul>
     </section>
 </div>-->
-
 <div class="container">
-<div class="row">
-<div class="row">
-    <div ng-controller="CarouselController">
 
-        <div class="bestsellers anim-slide-below-fade" data-anim-sync="true" ng-repeat="result in getCatalog">
-            <div class="row">
-                <div class="bestsellers-title-block" ng-init="cat = result.CategoryUniqueID">
-                    <h3 class="bestsellers-title">{{ result.Name || 'No Data' }}</h3>
+        <div class="row">
+            <div class="bestsellers anim-slide-below-fade">
+                <div ng-repeat="category in getCatalog">
+                    <div class="row">
+                        <div class="bestsellers-title-block">
+                            <h3 ng-init="cat = category.CategoryUniqueID" class="bestsellers-title">{{ category.Name || 'No Data' }}</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <flex-slider flex-slide="product in getProducts track by $index">
+                        <li ng-if="product.CategoriesID | contains: cat">
+                                <div class="borderbox">
+                                    <span class="pro-img">
+                                        <a ui-sref="product-details({ productId: product.ProductUniqueID })"> <img ng-src="{{ product.ImageUrlThumb }}" class="img-responsive" alt="a" /></a>
+                                    </span>
+                                    <p><a ui-sref="product-details({ productId: product.ProductUniqueID })">{{ product.Name || 'No Data' }}</a></p>
+                                    <span class="price">
+                                        <div class="price-box">
+                                            <span> {{ product.Price || 'No Data' }}</span>
+                                        </div>
+                                     </span>
+                                </div>
+                        </li>
+                    </flex-slider>
+                    </div>
                 </div>
             </div>
-            <uib-carousel active="active" no-wrap="true">
-                <uib-slide ng-repeat="row in chunkedSlides" ng-init="cat = result.CategoryUniqueID">
-                        <div ng-repeat="slide in row"  ng-if="slide.catids | contains: cat" ng-class="getSlideClass(chunkSize)" class="borderbox" smart-chunking>
-                            <span class="pro-img">
-                                <a ui-sref="product-details({ productId: slide.id })"> <img ng-src="{{slide.image}}" class="img-responsive" alt="a" /></a>
-                            </span>
-                            <p><a ui-sref="product-details({ productId: slide.id })">{{ slide.name || 'No Data' }}</a></p>
-                            <span class="price">
-                                <div class="price-box">
-                                    <span>{{ slide.price || 'No Data' }}</span>
-                                </div>
-                             </span>
-                        </div>
-                </uib-slide>
-            </uib-carousel>
-        </div></div>
-    </div>
+        </div>
+
+
 </div>
-</div>
+
+
+
 
 
 

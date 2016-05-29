@@ -7,14 +7,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./styles/app.css" media="all"/>
-    <!--<link rel="stylesheet" type="text/css" href="http://numeproducts.com/media/css/u.9681955089e1fd1f6c573a057c5f5f22.1464050780.css" media="all"/>-->
     <link rel="stylesheet" type="text/css" href="./bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css" media="all"/>
-    <link data-require="bootstrap-css@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="./bower_components/flexslider/flexslider.css">
     <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <style type="text/css">
         @import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
     </style>
+
     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">
     /c/Users/Stevie/Desktop/angular-class/404-catalog
     -->
@@ -37,12 +37,12 @@
 
         <div ui-view class="catalog anim-in-out" data-anim-speed="1000"></div>
     </div>
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/flexslider/jquery.flexslider.js"></script>
     <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-flexslider/angular-flexslider.js"></script>
     <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script data-require="ui-bootstrap@1.1.1" data-semver="1.1.1" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-1.1.1.js"></script>
-    <script data-require="ui-bootstrap-tpls@1.1.1" data-semver="1.1.1" src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-1.1.1.js"></script>
     <script src="./bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
     <script src="./bower_components/angular-filter/dist/angular-filter.js"></script>
     <script src="./bower_components/lodash/dist/lodash.js"></script>
@@ -53,6 +53,40 @@
     <script src="src/data-service.js"></script>
     <script src="src/poll-requested-page-service.js"></script>
     <script src="src/routes.js"></script>
+<script>
+    // store the slider in a local variable
+    var $window = $(window),
+            flexslider;
 
+    // tiny helper function to add breakpoints
+    function getGridSize() {
+        return (window.innerWidth < 600) ? 2 :
+                (window.innerWidth < 900) ? 3 : 4;
+    }
+
+//    jQuery(function() {
+//        SyntaxHighlighter.all();
+//    });
+
+    $window.load(function() {
+        jQuery('.flexslider').flexslider({
+            animation: "slide",
+            animationLoop: false,
+            itemWidth: 210,
+            itemMargin: 5,
+            minItems: getGridSize(), // use function to pull in initial value
+            maxItems: getGridSize() // use function to pull in initial value
+        });
+    });
+
+    // check grid size on resize event
+    $window.resize(function() {
+        var gridSize = getGridSize();
+
+        flexslider.vars.minItems = gridSize;
+        flexslider.vars.maxItems = gridSize;
+    });
+    //console.log($scope.product);
+</script>
 </body>
 </html>
