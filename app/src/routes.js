@@ -15,5 +15,5 @@
             $urlRouterProvider.when('', '/');
             //// For any unmatched url, redirect to /404
             $urlRouterProvider.otherwise("/404");
-    })
-}())
+    });
+}());
