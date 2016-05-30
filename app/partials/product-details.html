@@ -1,4 +1,6 @@
-<div class="content anim-slide-below-fade"  data-anim-sync="true">
+<div class="content productdetail anim-slide-below-fade"  data-anim-sync="true">
+    <script yotpo type="text/javascript"></script>
+
     <div class="product-col-left">
         <div class="pr-image-block">
             <div class="clearfix" id="content">
@@ -18,4 +20,13 @@
         <a ui-sref="catalog">Back to Catalog</a>
     </div>
 
+    <div class="yotpo yotpo-main-widget"
+         data-product-id="{{product.ProductUniqueID}}"
+         data-name="{{product.Name}}"
+         data-url="{{product.ProductUrl}}"
+         data-image-url="{{product.ImageUrlFull}}"
+         data-description="{{product.Description}}">
+    </div>
+
 </div>
+

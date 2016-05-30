@@ -10,8 +10,7 @@ body{
     padding: 0;
 }
 .bestsellers{
-    max-width: 1280px;
-    margin: 20px auto 25px;
+    margin: 30px auto 5px;
     clear: both;
 }
 .bestsellers .bestsellers-title-block {
@@ -137,7 +136,7 @@ body{
 
 /* product pages */
 .content {
-    max-width: 1280px;
+
     margin: 0 auto;
     padding: 35px 0;
 }
@@ -159,17 +158,25 @@ body{
 .catalog{
     position: absolute;
     width: 100%;
-
-    margin-top: 41px;
+    padding-top: 40px;
+    margin: 0 0 0;
+}
+.productdetail{
+    width: auto;
+    margin: 0 20px 0;
 }
 #all {
-    position: absolute;
+    position: fixed;
     width: 100%;
     text-transform: uppercase;
     font-family: 'Pathway Gothic One',sans-serif;
     -webkit-font-smoothing: antialiased;
     background: #000;
     height: 45px;
+    z-index: 1000;
+    -webkit-box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 10px #000000;
 }
 #all h2{
     text-transform: uppercase;
@@ -188,7 +195,7 @@ body{
     margin-top: 59px;
 }
 .container {
-    max-width: 1280px;
+
     margin: 0 auto;
 }
 header .container{
@@ -345,22 +352,39 @@ header .container{
 {
     margin-right: 10px;
 }
+.flexslider {
+    margin: 0 0 -11px!imprtant;
+}
 
 .flex-control-nav{
-    bottom: -23px!important;
-    z-index: 588;
+    bottom: 21px!important;
+    z-index: 800;
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
 }
 .flex-direction-nav{
     width: 100%;
     position: absolute;
-    bottom: -20px;
+    bottom: 17px;
     text-align: center;
+
 }
 .flex-direction-nav li{
-    width: 98%!important;
+    margin: 0 auto!important;
+    float: none!important;
+    width: 95%!important;
+    z-index: 800;
+    display: block!important;
 }
 .flex-direction-nav .flex-prev{
-    top: 43px;
+
+    zoom: 0.5;
+    -moz-transform: scale(0.5)
+}
+.flex-direction-nav .flex-next{
+
+    zoom: 0.5;
+    -moz-transform: scale(0.5)
 }
 
 /*.flip-clock-wrapper ul li a div div.inn{*/
@@ -383,4 +407,13 @@ header .container{
     float: right;
     margin: 0;
     margin: 5px 0 0 0;
+}
+.flex-direction-nav a:before{
+    color: #ccc!important;
+}
+.flex-control-paging li a{
+    background: #ccc!important;
+}
+.flex-control-paging li a.flex-active{
+    background: #8E8B8B!important;
 }
