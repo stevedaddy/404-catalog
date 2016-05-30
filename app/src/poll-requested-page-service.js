@@ -33,9 +33,7 @@
                     }, function(data){
                    //     console.log('The product they are viewing is still not returning a 400, do nothing');
                         $rootScope.$emit('howLong', howlong);
-                      //  console.log('Wait to check again: ' + howlong);
-                      //  $rootScope.howLong = howlong;
-                      //  console.log($rootScope.howLong);
+
                         toastr.error('The page you requested: ' + $rootScope.requestedPage + ' is still offline. ', 'Be back soon!', {
                             allowHtml: true,
                             closeButton: true

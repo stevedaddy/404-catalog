@@ -7,20 +7,23 @@
 
             //SIMULATE ANY REQUEST PAGE
             //var simulateRequestUrl = 'http://numeproducts.com';
-            //var simulateRequestUrl = 'http://numeproducts.com/styling-tools/curling-wands';
+            //SIMULATE ANY REQUEST PAGE
+            //var simulateRequestUrl = 'http://numeproducts.com/styling-tools/flat-irons';
             //var simulateRequestUrl = 'http://numeproducts.com/durrrrr';
             //$scope.catByCatUrl.push(simulateRequestUrl);
-            //$scope.requestedPage = simulateRequestUrl;
+
+            //SIMULATE ANY REQUEST PAGE
+           // $scope.requestedPage = simulateRequestUrl;
 
             //console.log($state.$current.self.name);
 
-            $rootScope.requestedPage = $rootScope.requestedPage || $window.location.href;
-            var requestedPage = $rootScope.requestedPage;
-            //function (stateOrName, context) {
-            //    if (arguments.length === 0) return map(objectKeys(states), function(name) { return states[name].self; });
-            //    var state = findState(stateOrName, context || $state.$current);
-            //    return (state && state.self) ? state.self : null;
-            //}
+           $rootScope.requestedPage = $rootScope.requestedPage || $window.location.href;
+           $scope.requestedPage = $rootScope.requestedPage;
+            //SIMULATE ANY REQUEST PAGE
+            //$rootScope.requestedPage = simulateRequestUrl || $window.location.href;
+
+            var requestedPage = $scope.requestedPage;
+
             isRequestInListOfCats = jQuery.inArray(requestedPage, $scope.catByCatUrl);
 
             if(isRequestInListOfCats != -1) {
