@@ -31,10 +31,14 @@
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div header ng-if="requestPolling"></div>
-        <header ng-if="!requestPolling" id="all">
-            <div class="container"><a href="/" class="nume-logo"><img src="http://numeproducts.com/skin/frontend/atypical/default/images/assets/nume-logo-2015.png" alt="NuMe"></a>
-                <h2><span class="countdownmessage">Oops! This is a real 404</span></h2></div>
+
+        <header id="all">
+            <div class="container"><a ui-sref="catalog" class="nume-logo"><img src="http://numeproducts.com/skin/frontend/atypical/default/images/assets/nume-logo-2015.png" alt="NuMe"></a>
+                <h2>
+                    <span ng-if="!requestPolling" class="countdownmessage">Oops! This is a real 404</span>
+                    <span header ng-if="requestPolling"></span>
+                </h2>
+            </div>
         </header>
         <div ui-view class="catalog anim-in-out" autoscroll="whichState" data-anim-speed="1000"></div>
     </div>
@@ -56,8 +60,8 @@
     <script src="src/routes.js"></script>
     <script src="src/header-directive.js"></script>
     <script src="src/carousel.js"></script>
+    <script src="src/yotpo-directive.js"></script>
     <!--flipclock shoukd load only when the polling function is running-->
     <script src="./bower_components/flipclock/compiled/flipclock.min.js"></script>
-    <script src="src/countdown.js"></script>
 </body>
 </html>
