@@ -3,7 +3,7 @@
         .value('lodash', _)
         .run(function(dataService, pollRequestedPage){
             dataService.importProducts();
-            pollRequestedPage.startPolling(5000);
+          //  pollRequestedPage.startPolling(5000);
         });
 
 }());

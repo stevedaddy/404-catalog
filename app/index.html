@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="./styles/app.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="./bower_components/angular-ui-router-anim-in-out/css/anim-in-out.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="./bower_components/flexslider/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="./bower_components/flipclock/compiled/flipclock.css">
     <link href='https://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <style type="text/css">
@@ -30,10 +31,6 @@
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header id="all">
-            <div class="container"><a href="/" class="nume-logo"><img src="http://numeproducts.com/skin/frontend/atypical/default/images/assets/nume-logo-2015.png" alt="NuMe"></a>
-                <h2>Oops! This Page was not found for some reason... re-checking in</h2></div>
-        </header>
 
         <div ui-view class="catalog anim-in-out" data-anim-speed="1000"></div>
     </div>
@@ -47,10 +44,15 @@
     <script src="./bower_components/angular-filter/dist/angular-filter.js"></script>
     <script src="./bower_components/lodash/dist/lodash.js"></script>
     <script src="src/app.js"></script>
+    <script src="src/404-controller.js"></script>
     <script src="src/catalog-controller.js"></script>
     <script src="src/product-controller.js"></script>
     <script src="src/data-service.js"></script>
     <script src="src/poll-requested-page-service.js"></script>
     <script src="src/routes.js"></script>
+    <script src="src/carousel.js"></script>
+    <!--flipclock shoukd load only when the polling function is running-->
+    <script src="./bower_components/flipclock/compiled/flipclock.min.js"></script>
+    <script src="src/countdown.js"></script>
 </body>
 </html>

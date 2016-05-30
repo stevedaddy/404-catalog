@@ -22,13 +22,14 @@ body{
 .bestsellers .bestsellers-title {
     font-style: italic;
     letter-spacing: .1em!important;
-    font-size: 38px!important;
+    font-size: 34px!important;
     font-family: "Times New Roman",Georgia,Serif;
     display: inline-block;
     position: relative;
     -webkit-font-smoothing: antialiased;
     text-transform: uppercase;
     font-weight: normal;
+    margin: 0;
 }
 
 .sub-heads {
@@ -168,7 +169,7 @@ body{
     font-family: 'Pathway Gothic One',sans-serif;
     -webkit-font-smoothing: antialiased;
     background: #000;
-
+    height: 45px;
 }
 #all h2{
     text-transform: uppercase;
@@ -189,6 +190,9 @@ body{
 .container {
     max-width: 1280px;
     margin: 0 auto;
+}
+header .container{
+    padding: 0 20px;
 }
 .nume-logo {
     float: left;
@@ -342,5 +346,40 @@ body{
     margin-right: 10px;
 }
 
+.flex-control-nav{
+    bottom: -23px!important;
+    z-index: 588;
+}
+.flex-direction-nav{
+    width: 100%;
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+}
+.flex-direction-nav li{
+    width: 98%!important;
+}
+.flex-direction-nav .flex-prev{
+    top: 43px;
+}
 
+/*.flip-clock-wrapper ul li a div div.inn{*/
 
+/*}*/
+/*.flip-clock-wrapper ul{*/
+    /*width:40px;*/
+/*}*/
+.countdown{
+    zoom: 0.35;
+    -moz-transform: scale(0.5)
+}
+.flip-clock-wrapper{
+    margin: 0!important;
+}
+.countdownmessage{
+    margin: 0 10px 0 0;
+}
+.countdownwrapper{
+    float: right;
+    margin: 0;
+}
