@@ -1,7 +1,7 @@
 (function(){
     angular.module('catalogApp')
-        .factory('pollRequestedPage', function($http, $timeout, $q, $rootScope){
-//console.log($rootScope.howLong);
+        .factory('pollRequestedPage', function($http, $timeout, $q, $rootScope, $window, toastr){
+            //console.log($rootScope.howLong);
             var leastWaitTime = 10000;
             $rootScope.howLong = $rootScope.howLong || leastWaitTime;
 
@@ -11,19 +11,31 @@
             };
 
             function checkSite(howlong){
-                //THIS WAY SEEMS WAY SIMPLER
-
+                //THE tests for broken/back online requests
+              //  $rootScope.requestedPage = 'http://numeproducts.com/hair-styling/hot-tools/hair-straightener/silhouette-flat-iron/';
+              //  var requestedPageRequestClean =  $rootScope.requestedPage.replace(/^https?\:\/\//i, "");
+               // $http.get('http://localhost:8080/proxy/'+ requestedPageRequestClean)
                 $http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
                     .then(function(data) {
-                    //    console.log('The product they are viewing is live again, send user message with redirect warning');
-                       // window.alert('the page you are looking for on nume is back, redirect countdown in modal');
-                        // don't run the intervalFunction again since we know the site is back
+                        toastr.success('Looks like the page you requested: ' + $rootScope.requestedPage + ' is back online. ', 'Page found!', {
+                            allowHtml: true,
+                            closeButton: true,
+                                onHidden: function() {
+                                    console.log('foo');
+                                    $window.location.assign($rootScope.requestedPage);
+                                }
+                        });
+
                     }, function(data){
                    //     console.log('The product they are viewing is still not returning a 400, do nothing');
                         $rootScope.$emit('howLong', howlong);
                       //  console.log('Wait to check again: ' + howlong);
                       //  $rootScope.howLong = howlong;
                       //  console.log($rootScope.howLong);
+                        toastr.error('The page you requested: ' + $rootScope.requestedPage + ' is still offline. ', 'Be back soon!', {
+                            allowHtml: true,
+                            closeButton: true
+                        });
                         intervalFunction(howlong);
                     });
             }
@@ -42,4 +54,5 @@
                 intervalFunction(waitTime);
             }
         });
-}())
+
+}());

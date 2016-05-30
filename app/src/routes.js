@@ -3,7 +3,7 @@
     .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         $stateProvider
             .state('catalog', {
-                url: "/catalog",
+                url: "/",
                 controller: 'CatalogCtrl',
                 templateUrl: "./partials/catalog.html"
 

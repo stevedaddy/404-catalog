@@ -10,7 +10,7 @@ body{
     padding: 0;
 }
 .bestsellers{
-    margin: 58px auto 0px;
+    margin: 23px auto 0px;
     clear: both;
 }
 .bestsellers .bestsellers-title-block {
@@ -30,7 +30,9 @@ body{
     font-weight: normal;
     margin: 0;
 }
-
+.bestsellers .ng-scope{
+    margin: 0;
+}
 .sub-heads {
     font-style: normal;
     letter-spacing: .02em;
@@ -353,11 +355,11 @@ header .container{
     margin-right: 10px;
 }
 .flexslider {
-    margin: 0 0 -11px!imprtant;
+    margin: 0px 0 25px!important;
 }
 
 .flex-control-nav{
-    bottom: 21px!important;
+    bottom: -30px!important;
     z-index: 800;
     zoom: 0.5;
     -moz-transform: scale(0.5);
@@ -365,7 +367,7 @@ header .container{
 .flex-direction-nav{
     width: 100%;
     position: absolute;
-    bottom: 17px;
+    bottom: 0px;
     text-align: center;
 
 }
