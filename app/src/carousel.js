@@ -9,7 +9,6 @@
             flexslider = slider;
         },
         itemMargin: 5,
-        animation: "slide",
         animationLoop: false
     });
     // store the slider in a local variable

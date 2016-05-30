@@ -5,6 +5,10 @@
             $scope.getProducts = dataService.getProducts();
             $scope.getCatalog = dataService.getCatalog();
 
+            if ($rootScope.requestPolling != false){
+                $scope.requestPolling = true;
+                $rootScope.requestPolling = $scope.requestPolling;
+             }
             // In your main controller
             $rootScope.$on('animStart', function ($event, element, speed) {
                 // do something

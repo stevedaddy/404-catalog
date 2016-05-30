@@ -6,7 +6,6 @@
                 replace: true,
                 templateUrl: "./partials/header.html",
                 controller: function ($scope, $rootScope, pollRequestedPage) {
-                    // Your behaviour goes here :)
                     pollRequestedPage.startPolling(10000);
                     $scope.timeTillTryAgain = $rootScope.howLong;
                     $rootScope.$on('howLong', function(event, data) {

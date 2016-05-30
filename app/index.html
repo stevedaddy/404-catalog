@@ -31,7 +31,11 @@
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div header></div>
+        <div header ng-if="requestPolling"></div>
+        <header ng-if="!requestPolling" id="all">
+            <div class="container"><a href="/" class="nume-logo"><img src="http://numeproducts.com/skin/frontend/atypical/default/images/assets/nume-logo-2015.png" alt="NuMe"></a>
+                <h2><span class="countdownmessage">Oops! This is a real 404</h2></div>
+        </header>
         <div ui-view class="catalog anim-in-out" data-anim-speed="1000"></div>
     </div>
     <script src="./bower_components/jquery/dist/jquery.js"></script>

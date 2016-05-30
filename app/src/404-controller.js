@@ -3,6 +3,7 @@
         .controller('ErrorCtrl', function($scope, $state, dataService, $rootScope) {
             $scope.getProducts = dataService.getProducts();
             $scope.getCatalog = dataService.getCatalog();
+            $rootScope.requestPolling = false;
 
             // In your main controller
             $rootScope.$on('animStart', function ($event, element, speed) {
