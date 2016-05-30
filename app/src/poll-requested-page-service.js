@@ -1,6 +1,6 @@
 (function(){
     angular.module('catalogApp')
-        .factory('pollRequestedPage', function($http, $timeout, $q, $rootScope, $window, toastr){
+        .factory('pollRequestedPage', function($http, $timeout, $q, $rootScope, $window, toastr, $location){
             //console.log($rootScope.howLong);
             var leastWaitTime = 10000;
             $rootScope.howLong = $rootScope.howLong || leastWaitTime;
@@ -12,8 +12,12 @@
 
             function checkSite(howlong){
                 //THE tests for broken/back online requests
-              //  $rootScope.requestedPage = 'http://numeproducts.com/hair-styling/hot-tools/hair-straightener/silhouette-flat-iron/';
-                var requestedPageRequestClean =  $rootScope.requestedPage.replace(/^https?\:\/\//i, "");
+
+                //SIMULATE SITE OFFLINE
+               var requestedPage = $rootScope.requestedPage;
+
+                var requestedPageRequestClean =  requestedPage.replace(/^https?\:\/\//i, "");
+
                $http.get('http://localhost:8080/proxy/'+ requestedPageRequestClean)
                 //$http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
                     .then(function(data) {

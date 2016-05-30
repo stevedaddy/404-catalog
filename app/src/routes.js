@@ -3,7 +3,7 @@
     .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
         $stateProvider
             .state('catalog', {
-                url: '/',
+                url: '',
                 controller: 'CatalogCtrl',
                 templateUrl: "./partials/catalog.html"
 
@@ -25,18 +25,12 @@
                 controller: 'ErrorCtrl',
                 templateUrl: "./partials/errorscatalog.html"
             });
-         //   $urlRouterProvider.when('', '/');
+            //$urlRouterProvider.when('', '/');
 
             $urlRouterProvider.otherwise(function($injector, $location){
                 var state = $injector.get('$state');
-                var thisPage = $injector.get('$rootScope');
-                if('http://numeproducts.com/hair-styling/hot-tools/hair-straightener/silhouette-flat-iron/aaa' == 'http://numeproducts.com/hair-styling/hot-tools/hair-straightener/silhouette-flat-iron/') {
-                    state.go('catalog');
-                    console.log(thisPage.requestedPage);
-                }
-                else{
-                    state.go('error');
-                }
+                state.go('catalog');
+                  //  console.log($location.path());
                 return $location.path();
             });
     });

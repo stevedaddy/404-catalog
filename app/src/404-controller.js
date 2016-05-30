@@ -4,7 +4,7 @@
             $scope.getProducts = dataService.getProducts();
             $scope.getCatalog = dataService.getCatalog();
             $rootScope.requestPolling = false;
-            console.log('sss');
+            console.log('real 404');
             // In your main controller
             $rootScope.$on('animStart', function ($event, element, speed) {
                 // do something

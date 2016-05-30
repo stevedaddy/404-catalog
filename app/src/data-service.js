@@ -8,7 +8,8 @@
                 getProducts: getProducts,
                 getCatalog: getCatalog,
                 productByProductId: productByProductId,
-                productByProductUrl: productByProductUrl
+                productByProductUrl: productByProductUrl,
+                catByCatUrl: catByCatUrl
             };
             function importProducts() {
                 return $http.get('./resources/catalog.json', {cache: true})
@@ -17,8 +18,9 @@
                         catalog = catalog.concat(response.data.Categories);
                     });
             }
-            function find(categoryUniqueId){
-                return lodash.find(products, {CategoryUniqueId: categoryUniqueId});
+            function catByCatUrl(catUrl){
+               return _.map(catalog, 'CategoryUrl');
+                //  return lodash.find(catalog, {categoryUrl: categoryUrl});
             }
             function productByProductId(productId) {
                 return lodash.find(products, {ProductUniqueID: productId});

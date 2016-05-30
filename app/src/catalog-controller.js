@@ -1,13 +1,28 @@
 (function(){
     angular.module('catalogApp')
-    .controller('CatalogCtrl', function($scope, $state, $stateParams, dataService, $rootScope, $window, $timeout) {
+    .controller('CatalogCtrl', function($scope, $state, $stateParams, dataService, lodash, $rootScope, $window, $timeout) {
             $scope.getProducts = dataService.getProducts();
             $scope.getCatalog = dataService.getCatalog();
+            $scope.catByCatUrl = dataService.catByCatUrl();
+
             $rootScope.requestedPage = $rootScope.requestedPage || $window.location.href;
-            if ($rootScope.requestPolling != false){
-                $scope.requestPolling = true;
-                $rootScope.requestPolling = $scope.requestPolling;
+            if($rootScope.requestedPage == 'http://localhost:8080/#/') {
+                //$rootScope.requestedPage = 'http://numeproducts.com/';
+              //  $rootScope.requestedPage = 'http://numeproducts.com/catalog';
+
+
+                ///  $scope.productBy = dataService.productByProductUrl($scope.product.ProductUrl);
+            isRequestInListOfCats = jQuery.inArray($rootScope.requestedPage, dataService.catByCatUrl());
+            console.log('Requested: ' + $rootScope.requestedPage);
+            console.log('Is in list of cats?: ' +isRequestInListOfCats);
+            if(isRequestInListOfCats != -1){
+             if ($rootScope.requestPolling != false){
+                 $scope.requestPolling = true;
+                 $rootScope.requestPolling = $scope.requestPolling;
              }
+            }
+            }
+
             // In your main controller
             $rootScope.$on('animStart', function ($event, element, speed) {
                 // do something
