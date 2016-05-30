@@ -13,9 +13,9 @@
             function checkSite(howlong){
                 //THE tests for broken/back online requests
               //  $rootScope.requestedPage = 'http://numeproducts.com/hair-styling/hot-tools/hair-straightener/silhouette-flat-iron/';
-              //  var requestedPageRequestClean =  $rootScope.requestedPage.replace(/^https?\:\/\//i, "");
-               // $http.get('http://localhost:8080/proxy/'+ requestedPageRequestClean)
-                $http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
+                var requestedPageRequestClean =  $rootScope.requestedPage.replace(/^https?\:\/\//i, "");
+               $http.get('http://localhost:8080/proxy/'+ requestedPageRequestClean)
+                //$http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
                     .then(function(data) {
                         toastr.success('Looks like the page you requested: ' + $rootScope.requestedPage + ' is back online. ', 'Page found!', {
                             allowHtml: true,

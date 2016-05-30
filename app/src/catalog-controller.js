@@ -4,7 +4,6 @@
             $scope.getProducts = dataService.getProducts();
             $scope.getCatalog = dataService.getCatalog();
             $rootScope.requestedPage = $rootScope.requestedPage || $window.location.href;
-           // console.log($rootScope.requestedPage);
             if ($rootScope.requestPolling != false){
                 $scope.requestPolling = true;
                 $rootScope.requestPolling = $scope.requestPolling;

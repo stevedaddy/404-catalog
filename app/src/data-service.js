@@ -7,7 +7,8 @@
                 importProducts: importProducts,
                 getProducts: getProducts,
                 getCatalog: getCatalog,
-                productByProductId: productByProductId
+                productByProductId: productByProductId,
+                productByProductUrl: productByProductUrl
             };
             function importProducts() {
                 return $http.get('./resources/catalog.json', {cache: true})
@@ -21,6 +22,9 @@
             }
             function productByProductId(productId) {
                 return lodash.find(products, {ProductUniqueID: productId});
+            }
+            function productByProductUrl(productUrl) {
+                return lodash.find(products, {ProductUrl: productUrl});
             }
             function getProducts(){
                 return products;
