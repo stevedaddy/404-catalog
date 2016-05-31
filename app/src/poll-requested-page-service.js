@@ -15,8 +15,12 @@
 
                 //SIMULATE SITE OFFLINE
                var requestedPage = $rootScope.requestedPage;
-
-                var requestedPageRequestClean =  requestedPage.replace(/^https?\:\/\//i, "no.");
+                var offLine = $location.search().online;
+                var online = '';
+                if(!offLine){
+                    var online =  "no.";
+                }
+                var requestedPageRequestClean =  requestedPage.replace(/^https?\:\/\//i, online);
 
                $http.get('http://localhost:8080/proxy/'+ requestedPageRequestClean)
                 //$http.get('http://localhost:8080/proxy/numeproducts.com/dddd')
