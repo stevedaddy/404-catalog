@@ -16,6 +16,9 @@
                         if(seconds > 59){
                             clockFace = 'MinuteCounter';
                         }
+                        //createClock('.countdown', seconds, clockFace);
+                        //seconds = $scope.timeTillTryAgain * 0.001;
+                        //createClock('.countdown', seconds, 'Counter');
                         clock = new FlipClock(jQuery('.countdown'), seconds, {
                             clockFace: clockFace,
                             autoStart: true,

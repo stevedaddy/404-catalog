@@ -24,6 +24,15 @@
 
             var requestedPage = $scope.requestedPage;
 
+            // WHATS up with the back button animation?
+            //breakpoints, wtf
+
+            // can I handle 404's coming back from my promise? should I?
+            // how should I do the proxy request for the json file on s3? cors?
+
+            // run-sequence gulp-sass gulp-angulartemplatecache
+
+            // THIS IS INFURATING, how do i do this with lodash?? why won't it work like the others from the dataservice?
             isRequestInListOfCats = jQuery.inArray(requestedPage, $scope.catByCatUrl);
 
             if(isRequestInListOfCats != -1) {
